@@ -20,10 +20,9 @@ import type { PageServerLoad } from './$types';
 export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
-export const load = async ({ fetch }: PageServerLoad) => {
+export const load = async ({  }: PageServerLoad) => {
   return {
-    posts: (await loadPosts({ fetch }, config.initialFeeds)).posts,
     repos: (await loadProjects({ fetch })).repos,
-    socials: (await loadSocials({ fetch })).props,
+    socials: (await loadSocials()).props,
   };
 };

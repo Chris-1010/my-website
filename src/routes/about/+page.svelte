@@ -116,7 +116,8 @@
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
-        border-radius: var(--curve-factor);
+        border: 2px solid white;
+        border-radius: 100%;
       }
       .pages {
         opacity: 0.9;

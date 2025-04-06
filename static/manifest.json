@@ -1,6 +1,6 @@
 {
-  "short_name": "AS93",
-  "name": "Alicia Sykes",
+  "short_name": "C.A Portfolio",
+  "name": "Christopher Ahern - Personal Website",
   "start_url": "/",
   "icons": [
     {
@@ -13,7 +13,7 @@
   "scope": "/",
   "theme_color": "#ff0099",
   "background_color": "#101010",
-  "description": "The personal website of Alicia Sykes",
+  "description": "The personal website of Christopher Ahern",
   "shortcuts": [
     {
       "name": "Blog - View recent posts",

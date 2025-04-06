@@ -5,7 +5,6 @@
   import Icon from '$src/components/Icon.svelte';
 
   const techStacks = Object.keys(config.techStack);
-  const techStackExtras = Object.keys(config.techStackExtras);
 
   export let accent = 'var(--accent)';
 
@@ -13,10 +12,6 @@
   
   <section class="tech-stack-section" style="--accent:{accent};">
     <Heading level="h2">Tech Stack</Heading>
-    <p class="sub-info">
-      Usually the tools I use for the job, depend on the job.
-      There's no one-size fits all, and as such I'm always trying out new technologies, and constantly learning.
-    </p>
     <p class="sub-info">
       The following technologies are the ones I'm most familiar with, and I've linked to code that I've written with each.
     </p>
@@ -43,18 +38,6 @@
           </div>
         {/each}
       </div>
-      {/each}
-    </div>
-    <div class="stack-table stack-extras">
-      {#each techStackExtras as stackName}
-        <div class="stack-name">
-          <h4>{stackName}</h4>
-        </div>
-        <div class="stack-extras-tech">
-          {#each config.techStackExtras[stackName] as technology}
-            <LangBadge language={technology} size={20} />
-          {/each}
-        </div>
       {/each}
     </div>
   </section>

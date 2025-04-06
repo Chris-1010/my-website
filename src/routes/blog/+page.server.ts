@@ -1,7 +1,6 @@
 import { get } from 'svelte/store';
 import type { PageServerLoad } from './$types';
 import { blogStore, rssFeedUrls } from '$src/store/BlogStore';
-import { fetchPostsFromRss } from '$src/helpers/fetch-rss-posts';
 import { type RssPost, PostStatus, type RssUrlList } from '$src/types/RssXml';
 
 export const prerender = true;
@@ -9,8 +8,6 @@ export const prerender = true;
 export const _loadPosts = (fetch?: (() => Promise<Response>),  feeds?: RssUrlList) => {
   let fetchStatus: PostStatus = PostStatus.Loading;
 
-  // Get promise of all posts from array of RSS feeds
-  const posts: Promise<RssPost[]> = fetchPostsFromRss(feeds || get(rssFeedUrls), fetch);
   // When resolved, update the store to save for later
   posts
     .then((resolvedPosts) => {

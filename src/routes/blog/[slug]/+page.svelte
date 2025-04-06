@@ -68,7 +68,7 @@
     else if (postStatus === PostStatus.Loading) title = 'Loading Post';
     else if (postStatus === PostStatus.NotFound) title = 'Post not Found';
     else if (postStatus === PostStatus.Errored) title = 'Error';
-    return `${title} | Alicia Sykes's Blog`;
+    return `${title} | Christopher's Blog`;
   };
 
   const makeDescription = () => {
@@ -76,7 +76,7 @@
       ? postToRender?.description
           .replace(/<\/?[^>]+(>|$)/g, '')
           .substring(0, 200) + '...'
-      : "Read this article, and many more on Alicia Sykes's blog";
+      : "Read this article, and many more on Christopher's blog";
   };
 
   /**

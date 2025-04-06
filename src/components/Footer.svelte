@@ -1,16 +1,17 @@
 <script lang="ts">
   import Icon from '$src/components/Icon.svelte';
   import { config } from '$src/store/BlogStore';
-  const { footerInfo, source } = config;
+  const { footerInfo } = config;
   export let color: string;
 </script>
 
 <footer style={`--accent: ${color};`}>
   <p>
-    © <a href={footerInfo.authorSite} target="_blank" rel="noreferrer">{footerInfo.author}</a>
+    Credit for this site goes to 
+    ©<a href={footerInfo.authorSite} target="_blank" rel="noreferrer">{footerInfo.author}</a>
     {new Date().getFullYear()} - Licensed under
     <a href={footerInfo.licenseLink} target="_blank" rel="noreferrer">{footerInfo.license}</a> -
-    View on <a href={source} target="_blank" rel="noreferrer">
+    View on <a href='https://github.com/Lissy93/my-website' target="_blank" rel="noreferrer">
       GitHub <Icon name="github" color="var(--accent)" /></a>
   </p>
 </footer>

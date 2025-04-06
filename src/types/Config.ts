@@ -14,9 +14,7 @@ export interface SiteConfig {
   description: string; // Website description
   source: string; // Link to project source (e.g. on GitHub)
   baseUrl: string; // The URL where the site is hosted
-  loadIndex?: boolean; // Weather to skip to /index instead of /home
-  initialFeeds: RssUrlList; // List of RSS feeds to fetch + show on load
-  additionalFeeds: RssUrlList; // List of all available feeds to add to filter dropdown
+  loadIndex?: boolean; // Whether to skip to /index instead of /home
   defaultLanguage: Locale; // Default language to use if 'system' is not supported
   defaultTheme: Theme; // Default theme to use if 'system' is not supported
   colorSchemes?: {
@@ -62,11 +60,6 @@ export interface SiteConfig {
     featured?: boolean; // If true, project will displayed in large size
     language?: string; // Optionally set/ override the repos language
   }[];
-  postComplimentaryData: {
-    // Optional extra data to attach to posts
-    postRef: string; // Post title to attach to
-    thumbnail: string; // URL to thumbnail image
-  }[];
   contact: {
     name: string; // Full name associated with contact email
     email: string; // Email address to display
@@ -82,8 +75,6 @@ export interface SiteConfig {
         [key: string]: string; // And additional template params
       };
     };
-    pgpKeyLink: string; // Link to PGP public key
-    pgpPublicKey: string; // PGP public key to display
   };
   about: {
     intro: string;
@@ -93,11 +84,4 @@ export interface SiteConfig {
   techStack: {
     [key: string]: TechStackItem[],
   };
-  techStackExtras: {
-    [key: string]: string[],
-  };
-  plausible?: {
-    scriptSrc: string;
-    domain: string;
-  },
 }
